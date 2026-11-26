@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ total, completed, percentage }) 
     <header className={styles.header}>
       <div className={styles.titleGroup}>
         <span className={styles.date}>{formattedDate}</span>
-        <h1 className={styles.title}>나의 할 일</h1>
+        <h1 className={styles.title}>꼭 해야 할 일</h1>
         <p className={styles.subtitle}>작은 실천으로 채우는 하루</p>
       </div>
 

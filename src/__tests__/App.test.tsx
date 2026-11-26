@@ -19,7 +19,7 @@ describe('TodoList App Functional & Accessibility Tests', () => {
   it('기본 렌더링 시 헤더, 진행률 0%, 빈 상태 안내를 올바르게 표시한다', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: '나의 할 일' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: '꼭 해야 할 일' })).toBeInTheDocument();
     expect(screen.getByText('작은 실천으로 채우는 하루')).toBeInTheDocument();
     expect(screen.getByRole('progressbar', { name: '할 일 진행률' })).toHaveAttribute('aria-valuenow', '0');
     expect(screen.getByText('아직 할 일이 없어요')).toBeInTheDocument();
