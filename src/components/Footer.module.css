@@ -1,0 +1,80 @@
+.footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.remaining {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.clearCompletedButton {
+  min-height: var(--target-size);
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-danger);
+  border-radius: var(--radius-small);
+  transition: all var(--duration-fast) var(--ease-standard);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearCompletedButton:hover:not(:disabled) {
+  background-color: var(--color-danger-soft);
+  color: var(--color-danger-hover);
+}
+
+.clearCompletedButton:disabled {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.noticeRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveNotice {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.errorNotice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-danger-soft);
+  border-radius: var(--radius-small);
+  color: var(--color-danger);
+  font-size: var(--font-size-caption);
+}
+
+.retryButton {
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-danger);
+  color: #FFFFFF;
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+}

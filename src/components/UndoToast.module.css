@@ -1,0 +1,81 @@
+.toast {
+  position: fixed;
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 480px;
+  background-color: var(--color-text);
+  color: var(--color-surface);
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-floating);
+  padding: var(--space-3) var(--space-4);
+  z-index: 100;
+  animation: slideUp var(--duration-normal) var(--ease-standard);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.message {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-surface);
+  flex: 1;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.undoButton {
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.undoButton:hover {
+  opacity: 0.9;
+}
+
+.dismissButton {
+  min-height: 36px;
+  padding: 0 var(--space-2);
+  color: var(--color-surface-muted);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dismissButton:hover {
+  color: var(--color-surface);
+}

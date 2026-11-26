@@ -1,0 +1,196 @@
+.item {
+  list-style: none;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.viewContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.checkLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  padding: var(--space-1) 0;
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-border-control);
+  border-radius: var(--radius-small);
+  outline: none;
+  cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.checkbox:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 14px 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.text {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  word-break: normal;
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+
+.textCompleted {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.actionButton {
+  min-width: var(--target-size);
+  min-height: var(--target-size);
+  width: var(--target-size);
+  height: var(--target-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-small);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.actionButton:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.actionButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.deleteButton:hover {
+  background-color: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+/* Edit Mode */
+.editContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .editContainer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.editInputWrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.editInput {
+  width: 100%;
+  min-height: var(--control-height);
+  padding: 0 var(--space-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-control);
+  border-radius: var(--radius-control);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+}
+
+.editInput:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-color: var(--color-focus);
+}
+
+.editInputError {
+  border-color: var(--color-danger);
+}
+
+.editErrorMessage {
+  font-size: var(--font-size-caption);
+  color: var(--color-danger);
+}
+
+.editActions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.saveButton,
+.cancelButton {
+  min-height: var(--control-height);
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-control);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.saveButton {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.saveButton:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.cancelButton {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+}
+
+.cancelButton:hover {
+  background-color: var(--color-border);
+  color: var(--color-text);
+}
